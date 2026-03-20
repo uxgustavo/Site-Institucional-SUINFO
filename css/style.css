@@ -1543,6 +1543,11 @@ table.resp td strong {
     .chart-grid.cols-3 {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .pillar-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px;
+    }
 }
 
 /* ── XLarge (≥1280px) ── */
