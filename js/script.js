@@ -28,11 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebarCollapsed = !sidebarCollapsed;
             applySidebarState();
             
-            // Se o usuário clicou para recolher equanto estava em hover, remove a classe de hover
-            if (sidebarCollapsed) {
-                sidebar.classList.remove('hover-expanded');
-                isHoverExpanding = false;
-            }
+            // Sempre remove a classe hover-expanded ao clicar,
+            // independentemente de expandir ou recolher, para evitar bugs visuais.
+            sidebar.classList.remove('hover-expanded');
+            isHoverExpanding = false;
         });
     }
 
